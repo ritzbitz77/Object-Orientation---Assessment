@@ -71,6 +71,7 @@ class Student():
 
 
 class Question():
+    """A class where questions are created and evaluated."""
    
     def __init__ (self, question, correct_answer):
         self.question = question
@@ -88,7 +89,8 @@ class Question():
 
 
 class Exam(object):
-
+    """A class where exam is created and evaluated"""
+    
     def __init__(self, name):
         self.questions = []
         self.name = name
@@ -112,7 +114,11 @@ def take_test(self, exam, student):
     student.score = score
 
 class Quiz(Exam):
+    """A class where a quiz is created but takes characteristics of the exam
 
+    True/False determines if the student passed (more than 50% correct) or failed
+    (less than 50% correct)"""
+    
     def __init__(self, name):
         super(Quiz, self).__init__(name)
     
